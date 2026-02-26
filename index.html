@@ -1,125 +1,152 @@
-<!DOCTYPE html>
-<html lang="fa">
+<!DOCTYPE html><html lang="fa">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>XyPixelon</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
-
-<style>
+<title>XyPixelon</title><link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet"><style>
+/* --- Reset --- */
+*{margin:0;padding:0;box-sizing:border-box;}
 body{
-    margin:0;
-    padding:0;
-    background: linear-gradient(135deg,#0f0f0f,#1e1e2f);
-    color:white;
     font-family:'Vazirmatn', sans-serif;
+    overflow-x:hidden;
+    color:white;
+    background: linear-gradient(-45deg,#0f0f0f,#1e1e2f,#0f1e2f,#1e0f2f);
+    background-size: 400% 400%;
+    animation: gradientBG 20s ease infinite;
+}
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+header{
     text-align:center;
+    padding:100px 20px 60px 20px;
+}
+header h1{
+    font-size:56px;
+    color:#00ffcc;
+    margin-bottom:10px;
+    opacity:0;
+    transform: translateY(-40px);
+    animation: fadeInUp 1s forwards;
+}
+header p{
+    font-size:18px;
+    color:#ccc;
+    opacity:0;
+    animation: fadeInUp 1s 0.3s forwards;
 }
 
 .container{
-    margin-top:50px;
-    max-width:700px;
-    margin-left:auto;
-    margin-right:auto;
+    max-width:1000px;
+    width:90%;
+    margin:50px auto;
 }
 
-h1{
-    color:#00ffcc;
-    font-size:40px;
-}
-
-.box{
+.section-box{
     background:#141421;
-    margin:20px 0;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 0 15px #00ffcc40;
+    padding:30px;
+    margin:25px 0;
+    border-radius:20px;
+    box-shadow:0 0 25px #00ffcc50;
+    opacity:0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
 }
+.section-box:nth-child(1){animation-delay:0.2s;}
+.section-box:nth-child(2){animation-delay:0.4s;}
+.section-box:nth-child(3){animation-delay:0.6s;}
 
-a{
+.section-box h2{
     color:#00ffcc;
-    text-decoration:none;
+    margin-bottom:15px;
+}
+.section-box p, .section-box a{
+    color:#ccc;
+    font-size:16px;
+}
+.section-box a{
+    color:#00ffcc;
     font-weight:bold;
+    text-decoration:none;
+    transition:0.3s;
+}
+.section-box a:hover{
+    color:#ffcc00;
 }
 
-a:hover{
-    color:white;
+@keyframes fadeInUp{
+    to{opacity:1; transform:translateY(0);}
 }
 
-/* باکس اخبار گوشه صفحه */
+/* News box */
 .news-box{
     position:fixed;
     top:20px;
     left:20px;
-    width:250px;
+    width:280px;
     background:#111;
-    padding:15px;
+    padding:20px;
     border-radius:15px;
-    box-shadow:0 0 15px #00ffcc50;
-    text-align:right;
-}
-
-.news-box h3{
-    margin-top:0;
-    color:#00ffcc;
-    font-size:18px;
-}
-
-.news-content{
-    font-size:14px;
-    color:#ccc;
-    max-height:300px;
+    box-shadow:0 0 25px #00ffcc70;
+    max-height:400px;
     overflow-y:auto;
+    transition:0.4s;
 }
-</style>
-</head>
+.news-box:hover{
+    transform: scale(1.05);
+}
+.news-box h3{
+    color:#00ffcc;
+    margin-bottom:10px;
+}
+.news-content{
+    color:#ccc;
+    font-size:14px;
+}
 
-<body>
-
-<!-- اخبار سایت -->
-<div class="news-box">
+/* Responsive */
+@media(max-width: 768px){
+    header h1{font-size:36px;}
+    header p{font-size:16px;}
+    .section-box{padding:20px;}
+    .news-box{
+        position:static;
+        width:90%;
+        margin:10px auto;
+        text-align:center;
+        max-height:250px;
+    }
+    .news-content{font-size:13px;}
+}
+</style></head>
+<body><header>
+<h1>به زای پیسلون خوش آمدید</h1>
+<p>مرجع اصلی سرورهای گیم و متفرقه و تیم اسپیک</p>
+</header><div class="news-box">
 <h3>📢 اخبار سایت</h3>
 <div class="news-content">
-<p>🔹 سرور ماینکرافتی مون درست شد آیپی
-    :XyPixelonSMP.aternos.me:37543.</p>
-<p>🔹 سرور تیم اسپیکمون وصله با خیال راحت میتوانید به آن وصل شوید .</p>
+<p>🔹 سرور ماینکرافتی مون درست شد آیپی: XyPixelonSMP.aternos.me:37543.</p>
+<p>🔹 سرور تیم اسپیکمون وصله با خیال راحت وصل شوید.</p>
 <p>🔹 به زودی امکانات جدید به سایت اضافه می‌شود.</p>
 </div>
-</div>
-
-<div class="container">
-
-<h1>به سایت XyPixelon خوش آمدید</h1>
-
-<div class="box">
-<p>شما می‌توانید با استفاده از آی پی زیر با دوستان خود در تیم اسپیک صحبت کنید:</p>
+</div><div class="container"><div class="section-box">
+<h2>تیم اسپیک</h2>
+<p>با دوستان خود در تیم اسپیک صحبت کنید:</p>
 <h2>XyPixelon.tssg.ir</h2>
 <a href="ts3server://XyPixelon.tssg.ir">اتصال به تیم اسپیک</a>
-</div>
-
-<div class="box">
-<p>در صورت مشکل با پشتیبانی تلگرام ما در ارتباط باشید.</p>
+</div><div class="section-box">
+<h2>پشتیبانی و شبکه‌های اجتماعی</h2>
 <p>📢 کانال تلگرام:</p>
 <a href="https://t.me/XyPixelon" target="_blank">https://t.me/XyPixelon</a>
-
-<p style="margin-top:10px;">🤖 ربات پشتیبانی:</p>
+<p>🤖 ربات پشتیبانی:</p>
 <a href="https://t.me/XyPixelon_Bot" target="_blank">@XyPixelon_Bot</a>
-
-<p style="margin-top:10px;">📌 روبیکا:</p>
+<p>📌 روبیکا:</p>
 <p>@XyPixelon</p>
-
-<p style="margin-top:10px;">📷 اینستاگرام:</p>
+<p>📷 اینستاگرام:</p>
 <p>@XyPixelon</p>
-</div>
-
-<div class="box">
+</div><div class="section-box">
 <p style="font-size:12px; color:#888;">© 2026 XyPixelon - All Rights Reserved</p>
-</div>
-
-</div>
-
-</body>
+</div></div></body>
 </html>
-
-
