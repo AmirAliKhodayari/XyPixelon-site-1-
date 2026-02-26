@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>XyPixelon</title>
 
-<!-- فونت ساده فارسی -->
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
@@ -48,24 +47,45 @@ a:hover{
     color:white;
 }
 
-.connect-button{
-    display:inline-block;
-    margin-top:10px;
-    padding:10px 20px;
-    background:#00ffcc;
-    color:#000;
-    font-weight:bold;
-    border-radius:10px;
-    text-decoration:none;
+/* باکس اخبار گوشه صفحه */
+.news-box{
+    position:fixed;
+    top:20px;
+    left:20px;
+    width:250px;
+    background:#111;
+    padding:15px;
+    border-radius:15px;
+    box-shadow:0 0 15px #00ffcc50;
+    text-align:right;
 }
 
-.connect-button:hover{
-    background:#00ffaa;
+.news-box h3{
+    margin-top:0;
+    color:#00ffcc;
+    font-size:18px;
+}
+
+.news-content{
+    font-size:14px;
+    color:#ccc;
+    max-height:300px;
+    overflow-y:auto;
 }
 </style>
 </head>
 
 <body>
+
+<!-- اخبار سایت -->
+<div class="news-box">
+<h3>📢 اخبار سایت</h3>
+<div class="news-content">
+<p>🔹 سایت XyPixelon راه‌اندازی شد.</p>
+<p>🔹 سرور تیم اسپیک فعال است.</p>
+<p>🔹 به زودی امکانات جدید اضافه می‌شود.</p>
+</div>
+</div>
 
 <div class="container">
 
@@ -74,21 +94,21 @@ a:hover{
 <div class="box">
 <p>شما می‌توانید با استفاده از آی پی زیر با دوستان خود در تیم اسپیک صحبت کنید:</p>
 <h2>XyPixelon.tssg.ir</h2>
-<a href="ts3server://XyPixelon.tssg.ir" class="connect-button">اتصال به تیم اسپیک</a>
+<a href="ts3server://XyPixelon.tssg.ir">اتصال به تیم اسپیک</a>
 </div>
 
 <div class="box">
-<p>شما می‌توانید در صورت مشکل و... با پشتیبانی تلگرام ما در ارتباط باشید.</p>
-<p>📢 لینک کانال تلگرام ما:</p>
+<p>در صورت مشکل با پشتیبانی تلگرام ما در ارتباط باشید.</p>
+<p>📢 کانال تلگرام:</p>
 <a href="https://t.me/XyPixelon" target="_blank">https://t.me/XyPixelon</a>
 
-<p style="margin-top:10px;">🤖 لینک پشتیبانی تلگرام ما:</p>
+<p style="margin-top:10px;">🤖 ربات پشتیبانی:</p>
 <a href="https://t.me/XyPixelon_Bot" target="_blank">@XyPixelon_Bot</a>
 
-<p style="margin-top:10px;">📌 لینک کانال روبیکای ما:</p>
+<p style="margin-top:10px;">📌 روبیکا:</p>
 <p>@XyPixelon</p>
 
-<p style="margin-top:10px;">📷 اینستاگرام ما:</p>
+<p style="margin-top:10px;">📷 اینستاگرام:</p>
 <p>@XyPixelon</p>
 </div>
 
